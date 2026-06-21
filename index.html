@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ALL IN ONE BENGALI</title>
+
 <style>
 body{
+margin:0;
 font-family:Arial,sans-serif;
 background:#f2f2f2;
-margin:0;
-padding:0;
 }
+
 header{
-background:#ff6600;
+background:#c00000;
 color:white;
 padding:20px;
 text-align:center;
+font-size:32px;
+font-weight:bold;
 }
-.box{
+
+nav{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+}
+
+.breaking{
+background:red;
+color:white;
+padding:10px;
+font-weight:bold;
+text-align:center;
+}
+
+.container{
+width:95%;
+margin:auto;
+}
+
+.news{
 background:white;
-margin:20px;
 padding:20px;
+margin-top:15px;
 border-radius:10px;
 box-shadow:0 0 10px gray;
 }
+
+.news img{
+width:100%;
+border-radius:10px;
+}
+
+h2{
+color:#c00000;
+}
+
 footer{
-background:#222;
+background:#111;
 color:white;
 text-align:center;
-padding:15px;
+padding:20px;
+margin-top:20px;
 }
 </style>
 </head>
@@ -34,18 +77,40 @@ padding:15px;
 <body>
 
 <header>
-<h1>ALL IN ONE BENGALI</h1>
-<p>News | Stories | Tech Updates</p>
+ALL IN ONE BENGALI
 </header>
 
-<div class="box">
-<h2>স্বাগতম</h2>
-<p>ALL IN ONE BENGALI ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+<nav>
+<a href="#">হোম</a>
+<a href="#">বাংলা</a>
+<a href="#">দেশ</a>
+<a href="#">খেলা</a>
+<a href="#">বিনোদন</a>
+<a href="#">প্রযুক্তি</a>
+</nav>
+
+<div class="breaking">
+🔥 Breaking News : সর্বশেষ খবর সবার আগে
 </div>
 
-<div class="box">
-<h2>সর্বশেষ খবর</h2>
-<p>এখানে খবর, গল্প এবং টেক আপডেট প্রকাশ করা হবে।</p>
+<div class="container">
+
+<div class="news">
+<img src="https://picsum.photos/900/400">
+<h2>প্রধান খবর</h2>
+<p>এখানে আপনার প্রধান খবর দেখানো হবে।</p>
+</div>
+
+<div class="news">
+<h2>খেলা</h2>
+<p>ক্রিকেট, ফুটবল এবং অন্যান্য খেলার খবর।</p>
+</div>
+
+<div class="news">
+<h2>প্রযুক্তি</h2>
+<p>মোবাইল, AI এবং নতুন প্রযুক্তির আপডেট।</p>
+</div>
+
 </div>
 
 <footer>
