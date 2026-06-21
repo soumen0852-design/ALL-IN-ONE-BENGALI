@@ -6,8 +6,14 @@
 <title>ALL IN ONE BENGALI</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:Arial,sans-serif;
 background:#f5f5f5;
 }
@@ -15,8 +21,26 @@ background:#f5f5f5;
 header{
 background:#b30000;
 color:white;
-padding:20px;
 text-align:center;
+padding:20px;
+}
+
+header h1{
+font-size:38px;
+}
+
+.search{
+padding:15px;
+text-align:center;
+background:white;
+}
+
+.search input{
+width:90%;
+max-width:600px;
+padding:12px;
+border-radius:30px;
+border:1px solid gray;
 }
 
 nav{
@@ -32,63 +56,26 @@ margin:10px;
 font-weight:bold;
 }
 
-.search{
-text-align:center;
-padding:15px;
-}
-
-input{
-width:80%;
-padding:12px;
-border-radius:30px;
-border:1px solid gray;
-}
-
 .breaking{
 background:red;
 color:white;
-padding:10px;
+padding:12px;
 font-weight:bold;
 overflow:hidden;
 }
 
-.box{
-background:white;
-margin:15px;
-padding:20px;
-border-radius:15px;
-box-shadow:0 0 10px gray;
-}
-
-img{
-width:100%;
-border-radius:10px;
-}
-
-.button{
-display:inline-block;
+button{
 padding:10px 20px;
-color:white;
-text-decoration:none;
-border-radius:10px;
-margin:5px;
+border:none;
+border-radius:20px;
+cursor:pointer;
 }
-
-.fb{background:#1877F2;}
-.yt{background:red;}
-.wa{background:green;}
 
 .dark{
-background:#222;
+background:#111;
 color:white;
 }
 
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-}
 </style>
 
 <script>
@@ -98,68 +85,55 @@ document.body.classList.toggle("dark");
 </script>
 
 </head>
+
 <body>
 
 <header>
+
 <h1>ALL IN ONE BENGALI</h1>
-<p>News | Stories | Tech Updates</p>
+
+<p>
+বাংলা খবর | গল্প | টেক | খেলাধুলা
+</p>
+
+<br>
+
+<button onclick="darkMode()">
+🌙 Dark Mode
+</button>
+
 </header>
 
+<div class="search">
+
+<input type="text"
+placeholder="🔍 Search News">
+
+</div>
+
 <nav>
+
 <a href="#">🏠 Home</a>
+
 <a href="#">📰 News</a>
+
+<a href="#">📖 Story</a>
+
+<a href="#">⚽ Sports</a>
+
+<a href="#">💻 Tech</a>
+
 <a href="#">📺 Videos</a>
+
 <a href="#">📞 Contact</a>
+
 </nav>
 
-<div class="search">
-<input type="text" placeholder="🔍 Search News">
-</div>
-
 <div class="breaking">
+
 🔥 BREAKING NEWS : ALL IN ONE BENGALI-তে আপনাকে স্বাগতম
-</div>
-
-<center>
-<button onclick="darkMode()">🌙 Dark Mode</button>
-</center>
-
-<div class="box">
-<h2>🖼️ আজকের খবর</h2>
-<img src="https://picsum.photos/800/400">
-<p>এখানে আপনার খবর দেখানো হবে।</p>
-</div>
-
-<div class="box">
-<h2>📺 YouTube Video</h2>
-
-<iframe width="100%" height="250"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-frameborder="0" allowfullscreen>
-</iframe>
 
 </div>
-
-<div class="box">
-<h2>📞 Contact Us</h2>
-<p>Email : allinonebengali@gmail.com</p>
-<p>WhatsApp : +91XXXXXXXXXX</p>
-</div>
-
-<div class="box">
-<h2>🔗 Follow Us</h2>
-
-<a class="button fb" href="#">Facebook</a>
-
-<a class="button yt" href="#">YouTube</a>
-
-<a class="button wa" href="#">WhatsApp</a>
-
-</div>
-
-<footer>
-© 2026 ALL IN ONE BENGALI | All Rights Reserved
-</footer>
 
 </body>
 </html>
