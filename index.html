@@ -294,4 +294,292 @@
     <footer class="site-footer">
         Copyright &copy; 2026 ALL IN ONE BENGALI
     </footer>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL IN ONE BENGALI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles - Clean White Look */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #ffffff; /* একদম সাদা ব্যাকগ্রাউন্ড */
+            color: #222;
+        }
 
+        /* Top Header - Classic News Style */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-icon, .search-icon {
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            color: #d32f2f; /* প্রফেশনাল লাল রঙ */
+            letter-spacing: 0.5px;
+        }
+
+        /* Navigation Menu - Horizontal Scroll */
+        .category-nav {
+            display: flex;
+            background: #fff;
+            padding: 0 15px;
+            overflow-x: auto;
+            border-bottom: 2px solid #000;
+        }
+
+        .category-nav span {
+            padding: 12px 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
+            white-space: nowrap;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px; /* বর্ডারের সাথে মেলানোর জন্য */
+        }
+
+        .category-nav span.active {
+            color: #d32f2f;
+            border-bottom: 3px solid #d32f2f;
+        }
+
+        /* Content Container */
+        .content-feed {
+            padding: 15px;
+            padding-bottom: 40px;
+        }
+
+        /* --- LEAD NEWS (Top Big Story) --- */
+        .lead-story {
+            cursor: pointer;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .lead-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            color: #d32f2f;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .lead-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            line-height: 1.3;
+            color: #000;
+        }
+
+        .lead-excerpt {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* --- LIST NEWS (Smaller items below) --- */
+        .list-story {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+        }
+
+        .list-story-content {
+            flex: 1;
+        }
+
+        .list-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            line-height: 1.35;
+            color: #111;
+        }
+
+        .list-img {
+            width: 110px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Reading Modal (Popup) */
+        .reader-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-header {
+            background: white;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 0 0 30px 0;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+        }
+
+        .modal-text-content {
+            padding: 20px;
+        }
+
+        .modal-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            color: #000;
+            line-height: 1.4;
+        }
+
+        .modal-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 25px 10px;
+            background-color: #222;
+            color: #ccc;
+            font-size: 14px;
+            margin-top: 20px;
+            border-top: 3px solid #d32f2f;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="menu-icon">☰</span>
+        <h1>ALL IN ONE BENGALI</h1>
+        <span class="search-icon">🔍</span>
+    </header>
+
+    <div class="category-nav">
+        <span class="active">প্রচ্ছদ</span>
+        <span>কলকাতা</span>
+        <span>রাজ্য</span>
+        <span>দেশ</span>
+        <span>বিনোদন</span>
+        <span>খেলা</span>
+    </div>
+
+    <div class="content-feed">
+
+        <div class="lead-story" onclick="openArticle('রাজ্যের আবহাওয়ার খবর: আগামী ২৪ ঘণ্টায় ভারী বৃষ্টির সতর্কতা', 'আবহাওয়া দপ্তরের পূর্বাভাস অনুযায়ী, আগামী ২৪ ঘণ্টায় রাজ্যের বেশ কয়েকটি জেলায় মাঝারি থেকে ভারী বৃষ্টির সম্ভাবনা রয়েছে। বিশেষ করে দক্ষিণবঙ্গের জেলাগুলোতে তাপমাত্রার কিছুটা পতন হতে পারে। সাধারণ মানুষকে ছাতা সঙ্গে রাখার পরামর্শ দেওয়া হয়েছে।', 'https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+            <img src="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Weather News" class="lead-img">
+            <span class="tag">আবহাওয়া</span>
+            <h2 class="lead-title">রাজ্যের আবহাওয়ার খবর: আগামী ২৪ ঘণ্টায় ভারী বৃষ্টির সতর্কতা</h2>
+            <p class="lead-excerpt">দক্ষিণবঙ্গের জেলাগুলোতে তাপমাত্রার পতন। জারি করা হল সতর্কতা...</p>
+        </div>
+
+        <div class="list-story" onclick="openArticle('অচেনা অতিথি: একটি রহস্যময় ছোট গল্প', 'রাতের অন্ধকারে গ্রামের মেঠো পথ ধরে হাঁটছিল সুমন। চারদিক নিস্তব্ধ, শুধু ঝিঁঝিঁ পোকার ডাক শোনা যাচ্ছে। হঠাৎ সে খেয়াল করল, পিছন থেকে কেউ যেন তার নাম ধরে ডাকছে। থমকে দাঁড়াল সে। ঘাড় ঘুরিয়ে দেখতেই পেল এক ছায়ামূর্তি...', 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+            <div class="list-story-content">
+                <span class="tag">গল্প</span>
+                <h2 class="list-title">অচেনা অতিথি: একটি রহস্যময় ছোট গল্প</h2>
+            </div>
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Story" class="list-img">
+        </div>
+
+        <div class="list-story" onclick="openArticle('নতুন স্মার্টফোন লঞ্চ: জানুন এর বিস্তারিত ফিচার্স ও দাম', 'আজ বাজারে এল নতুন মডেলের স্মার্টফোন। এতে থাকছে 108MP ক্যামেরা, 5000mAh ব্যাটারি এবং দুর্দান্ত প্রসেসর। দাম মধ্যবিত্তের নাগালের মধ্যেই। চলুন দেখে নেওয়া যাক এর বিস্তারিত ফিচার্স এবং স্পেসিফিকেশন।', 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+            <div class="list-story-content">
+                <span class="tag">টেক</span>
+                <h2 class="list-title">নতুন স্মার্টফোন লঞ্চ: জানুন এর বিস্তারিত ফিচার্স ও দাম</h2>
+            </div>
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tech News" class="list-img">
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        Copyright &copy; 2026 ALL IN ONE BENGALI
+    </footer>
+
+    <div id="readerModal" class="reader-modal">
+        <div class="modal-header">
+            <span style="font-weight: 700; font-size: 18px; color: #d32f2f;">ALL IN ONE BENGALI</span>
+            <button class="close-btn" onclick="closeArticle()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <img id="mImage" src="" alt="Article Banner" class="modal-img">
+            <div class="modal-text-content">
+                <h1 class="modal-title" id="mTitle">Title goes here</h1>
+                <div class="modal-text" id="mContent">
+                    Content goes here...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openArticle(title
+                             
