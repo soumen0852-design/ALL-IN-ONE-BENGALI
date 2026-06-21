@@ -313,3 +313,407 @@ allowfullscreen>
 <p>Email: allinonebengali@gmail.com</p>
 <p>WhatsApp: +91 XXXXX XXXXX</p>
 </div>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL IN ONE BENGALI | News & Tech Portal</title>
+    <!-- Google Fonts for Professional Bengali Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #d32f2f; /* Professional News Red */
+            --secondary-color: #1a1a1a;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 5px 20px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* --- BREAKING NEWS TICKER --- */
+        .ticker-wrap {
+            background-color: #ffebee;
+            border-bottom: 1px solid #ffcdd2;
+            padding: 10px 5%;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-title {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2px 10px;
+            font-weight: 600;
+            margin-right: 15px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        .ticker-text {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .ticker-text marquee {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        /* --- MAIN LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* --- FEATURED & GRID NEWS --- */
+        .featured-article {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .featured-article img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .featured-content {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            width: 100%;
+            padding: 20px;
+            color: var(--white);
+        }
+
+        .category-tag {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .news-card-content {
+            padding: 15px;
+        }
+
+        .news-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 10px 0;
+            color: var(--secondary-color);
+        }
+
+        .news-card-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar-widget {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .widget-title {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: var(--secondary-color);
+        }
+
+        .trending-list {
+            list-style: none;
+        }
+
+        .trending-list li {
+            border-bottom: 1px solid var(--light-gray);
+            padding: 10px 0;
+        }
+
+        .trending-list li:last-child {
+            border-bottom: none;
+        }
+
+        .trending-list li a {
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .trending-list li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none; /* In a real app, you'd add a hamburger menu here */
+            }
+            .featured-article img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <span id="current-date"></span>
+            <span>কলকাতা, পশ্চিমবঙ্গ (Kolkata, WB)</span>
+        </div>
+        <nav class="navbar">
+            <div class="logo">ALL IN ONE BENGALI</div>
+            <ul class="nav-links">
+                <li><a href="#">হোম (Home)</a></li>
+                <li><a href="#">খবর (News)</a></li>
+                <li><a href="#">টেক (Tech)</a></li>
+                <li><a href="#">খেলা (Sports)</a></li>
+                <li><a href="#">বিনোদন (Entertainment)</a></li>
+            </ul>
+            <button class="search-btn">Search</button>
+        </nav>
+    </header>
+
+    <!-- Breaking News Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-title">ব্রেকিং নিউজ</div>
+        <div class="ticker-text">
+            <marquee behavior="scroll" direction="left" scrollamount="6">
+                গুগল প্রকাশ করলো তাদের নতুন এআই ফিচার | আগামী সপ্তাহে বাজারে আসছে নতুন আইফোন | শেয়ার বাজারে বড় ধস, চিন্তায় বিনিয়োগকারীরা | 
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <!-- Left Side: Main News Articles -->
+        <section class="main-news">
+            
+            <!-- Featured Large Article -->
+            <article class="featured-article">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tech News">
+                <div class="featured-content">
+                    <span class="category-tag">টেকনোলজি</span>
+                    <h2>কৃত্রিম বুদ্ধিমত্তা (AI) কীভাবে বদলে দিচ্ছে আধুনিক টেক দুনিয়া? বিস্তারিত জানুন</h2>
+                    <p>প্রযুক্তির এই দ্রুত পরিবর্তনের যুগে এআইয়ের ভূমিকা কতটা গুরুত্বপূর্ণ, তা নিয়ে বিশেষজ্ঞদের মতামত...</p>
+                </div>
+            </article>
+
+            <!-- News Grid -->
+            <div class="news-grid">
+                <!-- Card 1 -->
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="News">
+                    <div class="news-card-content">
+                        <span class="category-tag">জাতীয়</span>
+                        <h3 class="news-card-title">আসন্ন বাজেটে মধ্যবিত্তদের জন্য কি কোনো সুখবর থাকছে?</h3>
+                        <p class="news-card-desc">অর্থনীতিবিদদের মতে, এবারের বাজেটে আয়করে ছাড় পাওয়ার সম্ভাবনা রয়েছে...</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sports">
+                    <div class="news-card-content">
+                        <span class="category-tag">খেলা</span>
+                        <h3 class="news-card-title">বিশ্বকাপের ফাইনালে মুখোমুখি হচ্ছে দুই চিরপ্রতিদ্বন্দ্বী</h3>
+                        <p class="news-card-desc">আগামীকাল রাত ৮টায় শুরু হতে চলা এই মেগা ফাইনাল নিয়ে দর্শকদের মধ্যে উন্মাদনা তুঙ্গে...</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cinema">
+                    <div class="news-card-content">
+                        <span class="category-tag">বিনোদন</span>
+                        <h3 class="news-card-title">নতুন বাংলা সিনেমা রিলিজের প্রথম দিনেই বক্স অফিসে ঝড়</h3>
+                        <p class="news-card-desc">দর্শকদের বিপুল সাড়া পেয়েছে এই নতুন থ্রিলার সিনেমাটি...</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="news-card">
+                    <img src="https://images.unsplash.com/photo-1526406915894-7bcd65f60845?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gadget">
+                    <div class="news-card-content">
+                        <span class="category-tag">গ্যাজেট</span>
+                        <h3 class="news-card-title">অর্ধেক দামে পাওয়া যাচ্ছে স্মার্টওয়াচ, দেখুন সেরা ডিল</h3>
+                        <p class="news-card-desc">অনলাইন সেলে ইলেকট্রনিক্স জিনিসের ওপর বিশাল ছাড়...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side: Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3 class="widget-title">ট্রেন্ডিং নিউজ (Trending)</h3>
+                <ul class="trending-list">
+                    <li><a href="#">১. শহরে হঠাৎ তাপমাত্রার পারদ পতন, বৃষ্টির পূর্বাভাস...</a></li>
+                    <li><a href="#">২. নতুন ৫জি (5G) স্মার্টফোন আনল স্যামসাং, দাম জানুন...</a></li>
+                    <li><a href="#">৩. সোশ্যাল মিডিয়ায় ভাইরাল নতুন গানের ভিডিও...</a></li>
+                    <li><a href="#">৪. রেলপথে বড় পরিবর্তন, বাতিল একাধিক ট্রেন...</a></li>
+                    <li><a href="#">৫. অনলাইনে অর্থ উপার্জনের ৫টি সেরা উপায়...</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">নিউজলেটার সাবস্ক্রাইব</h3>
+                <p style="font-size: 14px; margin-bottom: 10px; color: #666;">প্রতিদিনের তাজা খবর ইমেইলে পেতে সাবস্ক্রাইব করুন।</p>
+                <input type="email" placeholder="আপনার ইমেইল দিন..." style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <button class="search-btn" style="width: 100%;">সাবস্ক্রাইব করুন</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ALL IN ONE BENGALI. All Rights Reserved.</p>
+        <p style="font-size: 14px; margin-top: 5px; color: #aaa;">Design & Developed for News & Tech Enthusiasts.</p>
+    </footer>
+
+    <!-- JavaScript for Live Date -->
+    <script>
+        // Display current date in Bengali format
+        const dateElement = document.getElementById('current-date');
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const today = new Date();
+        // Using bn-IN locale for Bengali rendering
+        dateElement.textContent = today.toLocaleDateString('bn-IN', options);
+    </script>
+</body>
+</html>
