@@ -137,3 +137,130 @@ placeholder="🔍 Search News">
 
 </body>
 </html>
+
+
+<style>
+
+.container{
+display:flex;
+flex-wrap:wrap;
+padding:15px;
+}
+
+.main-news{
+flex:70%;
+}
+
+.sidebar{
+flex:30%;
+}
+
+.card{
+background:white;
+margin:15px;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 10px gray;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+.sidebar .card{
+background:#fff7f7;
+}
+
+@media(max-width:768px){
+
+.main-news,
+.sidebar{
+flex:100%;
+}
+
+}
+
+</style>
+
+
+<div class="container">
+
+<div class="main-news">
+
+<div class="card">
+
+<img src="https://picsum.photos/900/450">
+
+<h2>📰 আজকের প্রধান খবর</h2>
+
+<p>
+এখানে আপনার প্রধান খবর দেখানো হবে। নিজের খবর বা গল্প পরে এখানে লিখতে পারবেন।
+</p>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://picsum.photos/800/400?1">
+
+<h2>📖 রহস্যময় জঙ্গল</h2>
+
+<p>
+একদিন গভীর রাতে জঙ্গলের ভিতর থেকে অদ্ভুত আওয়াজ ভেসে এলো...
+</p>
+
+<a href="#">সম্পূর্ণ পড়ুন →</a>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://picsum.photos/800/400?2">
+
+<h2>💻 নতুন AI প্রযুক্তি</h2>
+
+<p>
+AI দুনিয়ায় নতুন পরিবর্তন নিয়ে বিস্তারিত খবর।
+</p>
+
+<a href="#">বিস্তারিত →</a>
+
+</div>
+
+</div>
+
+
+
+<div class="sidebar">
+
+<div class="card">
+
+<h2>🔥 Trending News</h2>
+
+<p>📰 পশ্চিমবঙ্গ</p>
+<p>⚽ খেলাধুলা</p>
+<p>💻 প্রযুক্তি</p>
+<p>🎬 বিনোদন</p>
+<p>📖 গল্প</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>📅 আজকের আপডেট</h2>
+
+<p>✔ নতুন খবর</p>
+
+<p>✔ নতুন গল্প</p>
+
+<p>✔ YouTube ভিডিও</p>
+
+</div>
+
+</div>
+
+</div>
